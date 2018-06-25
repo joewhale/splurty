@@ -11,26 +11,44 @@
   <body>
     <header class="row">
       <div class="col-3">
-        <div class="circle">
-          <br />
-          choi
-          <br />
-          quote
-          <br />
-          app
-        </div>
+        <%= link_to root_path, class: 'logo' do %>
+          <div class="circle">
+            <br />
+            choi
+            <br />
+            quote
+            <br />
+            app
+          </div>
+        <% end %>
       </div>
 
       <div class="col-4 slogan">
         spittin quotes and game since 1992
       </div>
       <div class="col-5 links">
-        <%= link_to 'Contribute', '#' %>
+        <%= link_to 'Contribute', new_quote_path %>
         <%= link_to 'About', '#' %>
       </div>
     </header>
     <hr>
     <br class="clear" />
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <%= link_to "next quote =>", root_path, class: 'next-quote' %>
+          </div>
+          <div class="col-6 footer-blurb">
+            created by Joel Choi. <a href="https://github.com/joewhale/splurty" target="blank">[github repo]</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>
