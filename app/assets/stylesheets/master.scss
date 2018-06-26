@@ -58,3 +58,17 @@ hr {
 .logo:hover {
   text-decoration: none;
 }
+
+@media (max-width: 750px) {
+  .footer-blurb {
+    text-align: left;
+  }
+}
+
+h3 span {
+  color: #dddddd;
+}
+
+::selection {
+  background-color: #f84343;
+}
